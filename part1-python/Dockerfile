@@ -2,6 +2,7 @@ FROM python:3.10-bullseye
 WORKDIR /app
 LABEL authors="admin"
 
+COPY . .
 RUN python -m venv ./.venv
 
 COPY dependencies.txt .
@@ -9,7 +10,7 @@ COPY dependencies.txt .
 RUN . ./.venv/bin/activate && \
     pip install -r dependencies.txt
 
-COPY . .
+
 
 EXPOSE 8080
 
