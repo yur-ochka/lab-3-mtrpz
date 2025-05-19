@@ -6,6 +6,9 @@ from spaceship.config import Settings
 from spaceship.routers import api, health
 
 
+print("Extremely important line")
+
+
 def make_app(settings: Settings) -> FastAPI:
     app = FastAPI(
         debug=settings.debug,
