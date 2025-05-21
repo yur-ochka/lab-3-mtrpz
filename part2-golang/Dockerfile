@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . .
 RUN go build -o fizzbuzz
 
-FROM scratch
+FROM gcr.io/distroless/base
 
 WORKDIR /app
 
